@@ -1,0 +1,1301 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#"
+     xml:base="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion">
+        <DevelopmentComunity xml:lang="en">Carlos Eduardo Laschi de Oliveira
+João Pedro Campos
+Halim Hizaoui</DevelopmentComunity>
+        <MethodologicalFramework xml:lang="en">This ontology was created with the aim of describe eventual problems after a blood transfusion. Basically, knowing some symptoms about a patient, we want to know what caused this problem and the adversed reaction(s), i.e. diagnosis, that a patient may have.
+Our target audience is primarily the healthy community.
+
+In this project there was no incorporation of other ontologies.</MethodologicalFramework>
+        <OntologyName xml:lang="en">Adverse effects of blood transfusion: causes, symptoms and treatments</OntologyName>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transfusion</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#DevelopmentComunity -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#DevelopmentComunity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#versionInfo"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#MethodologicalFramework -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#MethodologicalFramework">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#OntologyName -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#OntologyName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#versionInfo"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#hasAdvReac -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#hasAdvReac">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#isAdvReacOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Patient"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AdverseReaction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#hasSymptoms -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#hasSymptoms">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#isPresentedIn"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AdverseReaction"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Patient"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Symptoms"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#isAdvReacOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#isAdvReacOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AdverseReaction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Patient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#isPresentedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#isPresentedIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Symptoms"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AdverseReaction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Patient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#hasAge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#hasAge">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Patient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#hasBloodType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#hasBloodType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Patient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#hasDaysOfTransfusionPassed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#hasDaysOfTransfusionPassed">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Patient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#hasName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Patient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#hasRh -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#hasRh">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Patient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AbdominalPain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AbdominalPain">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#NeuroMuscularSigns"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#LowerBackPain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AdverseReaction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AdverseReaction">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#hasSymptoms"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Symptoms"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Allergic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Allergic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AdverseReaction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Alloimmunization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Alloimmunization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Imunological"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#hasSymptoms"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Anemia"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#DarkUrine"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Hemolysis"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Jaundice"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AlteredMentalStatus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AlteredMentalStatus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#GeneralSigns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AnaphylacticShock -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AnaphylacticShock">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Allergic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#hasSymptoms"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AbdominalPain"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AlteredMentalStatus"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Bronchospasm"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#CardiovascularShock"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Diarrhea"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Discomfort"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Erythroderma"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#GlottisEdema"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Hypotension"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#SkinRash"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Sweating"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Vomiting"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AnaphylactoidShock -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AnaphylactoidShock">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Allergic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#hasSymptoms"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AbdominalPain"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Bronchospasm"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Diarrhea"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Discomfort"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Erythroderma"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#GlottisEdema"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#SkinRash"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Sweating"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Vomiting"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Anemia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Anemia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#CardiovascularSigns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Anxiety -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Anxiety">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#GeneralSigns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Bronchospasm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Bronchospasm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#RespiratorySigns"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#GlottisEdema"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#CardiovascularShock -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#CardiovascularShock">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#CardiovascularSigns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#CardiovascularSigns -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#CardiovascularSigns">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Symptoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Cyanosis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Cyanosis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#SkinSigns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#DarkUrine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#DarkUrine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#UrinarySigns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#DecreaseInHemoglobinLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#DecreaseInHemoglobinLevel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#LaboratorialSigns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#DelayedHemolyticReaction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#DelayedHemolyticReaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Imunological"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#hasSymptoms"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#DarkUrine"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#DecreaseInHemoglobinLevel"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Hyperthemia"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#IncreaseDirectBilirubin"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Jaundice"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Diarrhea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Diarrhea">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#DigestiveSigns"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Vomiting"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#DigestiveSigns -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#DigestiveSigns">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Symptoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Discomfort -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Discomfort">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#GeneralSigns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#DisseminatedIntravascularCoagulation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#DisseminatedIntravascularCoagulation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#CardiovascularSigns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#EpidermalNecrolysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#EpidermalNecrolysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#SkinSigns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Erythroderma -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Erythroderma">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#SkinSigns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#FebrileNonhemolytic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#FebrileNonhemolytic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AdverseReaction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#hasSymptoms"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Fever"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#IntenseShivering"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Tremors"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Fever -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Fever">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#GeneralSigns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#GeneralSigns -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#GeneralSigns">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Symptoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#GlottisEdema -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#GlottisEdema">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#RespiratorySigns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#GraftVersusHost -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#GraftVersusHost">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Imunological"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#hasSymptoms"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Anemia"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Diarrhea"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#EpidermalNecrolysis"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Erythroderma"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Jaundice"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#SkinRash"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Hemolysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Hemolysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#LaboratorialSigns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#HemorrhagicSyndrome -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#HemorrhagicSyndrome">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#CardiovascularSigns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Hyperthemia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Hyperthemia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#GeneralSigns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Hypotension -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Hypotension">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#CardiovascularSigns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Imunological -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Imunological">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AdverseReaction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#IncreaseDirectBilirubin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#IncreaseDirectBilirubin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#LaboratorialSigns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Infectious -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Infectious">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AdverseReaction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#IntenseShivering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#IntenseShivering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#GeneralSigns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Itching -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Itching">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#GeneralSigns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Jaundice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Jaundice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#SkinSigns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#KidneyFailure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#KidneyFailure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#UrinarySigns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#LaboratorialSigns -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#LaboratorialSigns">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Symptoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#LeukoplateletIncompatibility -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#LeukoplateletIncompatibility">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Imunological"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#hasSymptoms"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Hyperthemia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#LowerBackPain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#LowerBackPain">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#NeuroMuscularSigns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#NeuroMuscularSigns -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#NeuroMuscularSigns">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Symptoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Oligoanuria -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Oligoanuria">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#UrinarySigns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Patient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Patient">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#hasAdvReac"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AdverseReaction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#hasSymptoms"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Symptoms"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Pruritus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Pruritus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#SkinSigns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#RespiratorySigns -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#RespiratorySigns">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Symptoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#SepticShock -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#SepticShock">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Infectious"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#hasSymptoms"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Cyanosis"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Diarrhea"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Fever"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#HemorrhagicSyndrome"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#IntenseShivering"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#KidneyFailure"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Oligoanuria"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Vomiting"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#SkinRash -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#SkinRash">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#SkinSigns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#SkinRedness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#SkinRedness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#SkinSigns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#SkinSigns -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#SkinSigns">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Symptoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Sweating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Sweating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#GeneralSigns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Symptoms -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Symptoms"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Tachycardia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Tachycardia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#CardiovascularSigns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Tremors -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Tremors">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#GeneralSigns"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#UrinarySigns -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#UrinarySigns">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Symptoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#UrticarialReaction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#UrticarialReaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Allergic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#hasSymptoms"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Pruritus"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#SkinRash"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Vomiting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Vomiting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#DigestiveSigns"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AbdominalPain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AbdominalPain"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AcuteHemolyticReaction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AcuteHemolyticReaction"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AgAcConflict -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AgAcConflict"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Alloimmunization -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Alloimmunization"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AlteredMentalStatus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AlteredMentalStatus"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AnaphylacticShock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AnaphylacticShock"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AnaphylactoidShock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AnaphylactoidShock"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Anemia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Anemia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Anemia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AntiCancerTreatment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AntiCancerTreatment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AntiIgAinIgADeficient -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AntiIgAinIgADeficient"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Anxiety -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Anxiety"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#BacterialInfection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#BacterialInfection"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Bronchospasm -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Bronchospasm"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#CardiovascularShock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#CardiovascularShock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#CardiovascularShock"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Charles -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Charles">
+        <hasSymptoms rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Anemia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Cyanosis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Cyanosis"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#CytokinesInPlasma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#CytokinesInPlasma"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#DarkUrine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#DarkUrine"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#DecreaseInHemoglobinLevel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#DecreaseInHemoglobinLevel"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#DelayedHemolyticReaction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#DelayedHemolyticReaction"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Diarrhea -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Diarrhea"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Discomfort -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Discomfort"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#DisseminatedIntravascularCoagulation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#DisseminatedIntravascularCoagulation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#DisseminatedIntravascularCoagulation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#EndotoxinRelease -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#EndotoxinRelease"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#EpidermaNecrolysis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#EpidermaNecrolysis"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Erythroderma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Erythroderma"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#FebrileNonhemolytic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#FebrileNonhemolytic"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Fever -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Fever"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#GlottisEdema -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#GlottisEdema"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#GraftVersusHost -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#GraftVersusHost"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Hemolysis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Hemolysis"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#HemorrhagicSyndrome -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#HemorrhagicSyndrome">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#HemorrhagicSyndrome"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#HistamineRelease -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#HistamineRelease"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Hyperthemia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Hyperthemia"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Hypotension -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Hypotension">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Hypotension"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#ImmuneDeficiencies -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#ImmuneDeficiencies"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#IncompatibilityABO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#IncompatibilityABO"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#IncompatibilityRh -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#IncompatibilityRh"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#IncreaseDirectBilirubin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#IncreaseDirectBilirubin"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#IntenseShivering -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#IntenseShivering"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#IntraFamilyDonation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#IntraFamilyDonation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#IrregularAntibodyNotDetected -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#IrregularAntibodyNotDetected"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Itching -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Itching"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Jaundice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Jaundice"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#KidneyFailure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#KidneyFailure"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#LeukoplateletIncompatibility -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#LeukoplateletIncompatibility"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#LowerBackPain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#LowerBackPain"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Oligoanuria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Oligoanuria"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#PlasmaAllergy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#PlasmaAllergy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Pruritus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Pruritus"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#PyrogensInPlasma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#PyrogensInPlasma"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#SepticShock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#SepticShock"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#SkinRash -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#SkinRash"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#SkinRedness -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#SkinRedness"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Sweating -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Sweating"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Tachycardia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Tachycardia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Tachycardia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Thing -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Thing">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#TransfusionPlateletConcentrates -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#TransfusionPlateletConcentrates"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#TransfusionStandardRedBloodCellConcentrates -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#TransfusionStandardRedBloodCellConcentrates"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Tremors -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Tremors"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#UrticarialReaction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#UrticarialReaction"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Vomiting -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Vomiting"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Allergic"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#FebrileNonhemolytic"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Imunological"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Infectious"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AlteredMentalStatus"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Anxiety"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Discomfort"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Fever"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Hyperthemia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#IntenseShivering"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Itching"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Sweating"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Tremors"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AnaphylacticShock"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#AnaphylactoidShock"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#UrticarialReaction"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Anemia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#CardiovascularShock"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#DisseminatedIntravascularCoagulation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#HemorrhagicSyndrome"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Hypotension"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Tachycardia"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#CardiovascularSigns"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#DigestiveSigns"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#GeneralSigns"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#LaboratorialSigns"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#NeuroMuscularSigns"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#RespiratorySigns"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#SkinSigns"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#UrinarySigns"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Cyanosis"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#EpidermalNecrolysis"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Erythroderma"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Jaundice"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Pruritus"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#SkinRash"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#SkinRedness"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#DarkUrine"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#KidneyFailure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Oligoanuria"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#DecreaseInHemoglobinLevel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#Hemolysis"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cadulaschi/ontologies/2020/10/transfusion#IncreaseDirectBilirubin"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
